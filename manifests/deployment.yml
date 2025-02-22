@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: tamilselvanpookzetestcicdpipeline 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tamilselvanpookzetestcicdpipeline
+  template:
+    metadata:
+      labels:
+        app: tamilselvanpookzetestcicdpipeline 
+    spec:
+      containers:
+        - name: tamilselvanpookzetestcicdpipeline 
+          image: tamil01container.azurecr.io/tamilselvanpookzetestcicdpipeline
+          ports:
+          - containerPort: 8080
